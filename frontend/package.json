@@ -1,0 +1,23 @@
+{
+  "name": "ravencode-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.0",
+    "leaflet": "^1.9.4",
+    "leaflet.heat": "^0.2.0",
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "vite": "^5.3.1",
+    "@vitejs/plugin-react": "^4.3.1"
+  }
+}

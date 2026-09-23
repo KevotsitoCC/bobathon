@@ -1,0 +1,138 @@
+/* ============================================
+   RAVENCODE — Variables CSS & Estilos Globales
+   ============================================ */
+
+:root {
+  /* Paleta de Colores */
+  --color-bg:          #090b0c;
+  --color-primary:     #2f3559;
+  --color-secondary:   #7272b0;
+  --color-border:      #b7a8bd;
+  --color-surface:     #dcd5e5;
+
+  /* Derivados funcionales */
+  --color-text-primary:   #dcd5e5;
+  --color-text-muted:     #b7a8bd;
+  --color-text-inverse:   #090b0c;
+  --color-card-bg:        #111318;
+  --color-card-border:    #2f3559;
+  --color-hover:          #7272b0;
+  --color-success:        #4caf82;
+  --color-danger:         #e05c6a;
+  --color-warning:        #e0a44a;
+
+  /* Tipografía */
+  --font-sans:    -apple-system, 'Segoe UI', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Espaciado */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+
+  /* Transiciones */
+  --transition:  all 0.2s ease;
+
+  /* Layout */
+  --sidebar-width:      240px;
+  --header-height:      64px;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Utilidades */
+.text-muted    { color: var(--color-text-muted); }
+.text-success  { color: var(--color-success); }
+.text-danger   { color: var(--color-danger); }
+.text-warning  { color: var(--color-warning); }
+
+.card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+.btn-primary:hover {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+.btn-secondary:hover {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn-danger {
+  background: var(--color-danger);
+  color: #fff;
+}
+.btn-danger:hover {
+  opacity: 0.85;
+}
+
+/* Leaflet override para tema oscuro */
+.leaflet-container {
+  background: #111318 !important;
+  border-radius: var(--radius-md);
+}
